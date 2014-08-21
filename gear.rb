@@ -15,8 +15,13 @@ class Gear
 
   def gear_inches
     #tire goes around rim twice for diameter
-    ratio * (rim + (tire * 2))
+    ratio * diameter
   end
+
+  def diameter
+    rim + (tire * 2)
+  end
+  
 end
 
 puts Gear.new(52, 11, 26, 1.5).gear_inches
